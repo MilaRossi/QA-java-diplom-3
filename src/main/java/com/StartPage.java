@@ -7,7 +7,6 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class StartPage {
     // локатор линктекста "Личный Кабинет"
-    //@FindBy(how = How.CLASS_NAME,using = "AppHeader_header__linkText__3q_va ml-2")
     @FindBy(how = How.LINK_TEXT, using = "Личный Кабинет")
     public SelenideElement userProfile;
     // локатор кнопки "Войти в аккаунт"
