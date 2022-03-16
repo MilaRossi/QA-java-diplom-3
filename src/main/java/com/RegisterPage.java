@@ -21,6 +21,9 @@ public class RegisterPage {
     // локатор ошибки "Некорректный пароль"
     @FindBy(how = How.XPATH, using = "//form/fieldset[3]/div/p")
     public SelenideElement incorrectPassword;
+    // локатор кнопки "Войти" в форме авторизации
+    @FindBy(how = How.XPATH,using = "//div/main/div/div/p/a")
+    private SelenideElement signInButtonInAuthForm;
     // заполнить "Имя"
     public void setValueName(String value) {
         name.setValue(value);
@@ -41,6 +44,11 @@ public class RegisterPage {
     // проверить видимость сообщения об ошибке "Некорректный пароль"
     public void shouldBeVisibleIncorrectPassword() {
         incorrectPassword.shouldBe(Condition.visible);
+    }
+    // кликнуть "Войти" в форме авторизации
+    public LoginPage clickSignInButtonInAuthForm() {
+        signInButtonInAuthForm.click();
+        return page(LoginPage.class);
     }
 
 }

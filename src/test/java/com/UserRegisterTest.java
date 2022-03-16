@@ -7,6 +7,53 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class UserRegisterTest {
     public static final String EMAIL_POSTFIX = "@yandex.ru";
+
+    @Test
+    @DisplayName("вход по кнопке «Войти в аккаунт» на главной")
+    public void signIn() {
+        // открыть стартовую страницу
+        StartPage startPage =
+                open("https://stellarburgers.nomoreparties.site",
+                        StartPage.class);
+
+        // кликнуть "Войти в аккаунт" и перейти на страницу логина пользователя
+        LoginPage loginPage = startPage.clickSignInButton();
+        // проверить видимость поля "Email"
+        loginPage.shouldBeVisibleInputEmail();
+    }
+
+    @Test
+    @DisplayName("вход через кнопку в форме регистрации")
+    public void signInInAuthForm() {
+        // открыть стартовую страницу
+        StartPage startPage =
+                open("https://stellarburgers.nomoreparties.site",
+                        StartPage.class);
+        // создать объект класса LoginPage, кликнуть на стартовой странице по "Личный Кабинет"
+        LoginPage loginPage = startPage.clickUserProfile();
+        // создать объект класса RegisterPage, кликнуть на логин странице по "Зарегистрироваться"
+        RegisterPage registerPage = loginPage.clickUserLogin();
+        // кликнуть "Войти" в форме авторизации и перейти на страницу логина пользователя
+        LoginPage loginPageNext = registerPage.clickSignInButtonInAuthForm();
+        // проверить видимость поля "Email"
+        loginPageNext.shouldBeVisibleInputEmail();
+    }
+
+    @Test
+    @DisplayName("вход через кнопку в форме восстановления пароля")
+    public void signInWithinResetPassword() {
+        // открыть стартовую страницу
+        StartPage startPage =
+                open("https://stellarburgers.nomoreparties.site",
+                        StartPage.class);
+        // создать объект класса LoginPage, кликнуть на стартовой странице по "Личный Кабинет"
+        LoginPage loginPage = startPage.clickUserProfile();
+        // кликнуть "Восстановить пароль"
+        loginPage.clickResetPassword();
+        // проверить на странице видимость текста "Восстановить пароль"
+        loginPage.shouldBeVisibleTextResetPassword();
+    }
+
     @Test
     @DisplayName("Успешная регистрация пользователя")
     public void registerUser() {
@@ -38,5 +85,7 @@ public class UserRegisterTest {
         // проверить видимость кнопки "Оформить заказ"
         startPageAfterLogin.shouldBeVisibleMakeOrderButton();
     }
+
+
 
 }

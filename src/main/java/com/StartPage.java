@@ -15,6 +15,9 @@ public class StartPage {
     // локатор кнопки "Оформить заказ"
     @FindBy(how = How.XPATH,using = "//div/main/section[2]/div/button")
     private SelenideElement makeOrderButton;
+    // локатор кнопки "Войти в аккаунт"
+    @FindBy(how = How.XPATH,using = "//div/main/section[2]/div/button")
+    private SelenideElement signInButton;
     // кликнуть "Личный Кабинет"
     public LoginPage clickUserProfile() {
         userProfile.click();
@@ -24,6 +27,15 @@ public class StartPage {
     public void shouldBeVisibleMakeOrderButton() {
         makeOrderButton.shouldBe(Condition.visible);
     }
+    // кликнуть "Войти в аккаунт"
+    public LoginPage clickSignInButton() {
+        signInButton.click();
+        return page(LoginPage.class);
+    }
+
+
+
+
 
 
 

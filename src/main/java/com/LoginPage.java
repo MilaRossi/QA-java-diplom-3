@@ -1,7 +1,10 @@
 package com;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.page;
 public class LoginPage {
     // локатор ссылки "Зарегистрироваться"
@@ -16,6 +19,13 @@ public class LoginPage {
     // локатор кнопки "Войти"
     @FindBy(how = How.XPATH,using = "//form/button")
     private SelenideElement loginButton;
+    // локатор кнопки "Восстановить пароль"
+    @FindBy(how = How.XPATH,using = "//div/main/div/div/p[2]/a")
+    private SelenideElement resetPassword;
+    // локатор текста "Восстановить пароль"
+    @FindBy(how = How.XPATH,using = "//div/main/div/h2")
+    private SelenideElement textResetPassword;
+
     // кликнуть "Зарегистрироваться"
     public RegisterPage clickUserLogin() {
         userRegister.click();
@@ -31,4 +41,18 @@ public class LoginPage {
         loginButton.click();
         return page(StartPage.class);
     }
+    // проверить видимость поля "Email"
+    public void shouldBeVisibleInputEmail() {
+        email.shouldBe(Condition.visible);
+    }
+    // кликнуть "Восстановить пароль"
+    public void clickResetPassword() {
+        resetPassword.click();
+    }
+    // проверить видимость текста "Восстановить пароль"
+    public void shouldBeVisibleTextResetPassword() {
+        textResetPassword.shouldHave(text("Восстановление пароля"));
+    }
+
+
 }
