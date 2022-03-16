@@ -1,4 +1,5 @@
 package com;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,6 +18,9 @@ public class RegisterPage {
     // локатор кнопки "Зарегистрироваться"
     @FindBy(how = How.XPATH,using = "//form/button")
     public SelenideElement signUp;
+    // локатор ошибки "Некорректный пароль"
+    @FindBy(how = How.XPATH, using = "//form/fieldset[3]/div/p")
+    public SelenideElement incorrectPassword;
     // заполнить "Имя"
     public void setValueName(String value) {
         name.setValue(value);
@@ -33,6 +37,10 @@ public class RegisterPage {
     public LoginPage clickSignUp() {
         signUp.click();
         return page(LoginPage.class);
+    }
+    // проверить видимость сообщения об ошибке "Некорректный пароль"
+    public void shouldBeVisibleIncorrectPassword() {
+        incorrectPassword.shouldBe(Condition.visible);
     }
 
 }
