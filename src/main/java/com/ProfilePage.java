@@ -7,10 +7,10 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class ProfilePage {
     // локатор кнопки "Выход"
-    @FindBy(how = How.XPATH,using = "//div/main/div/nav/ul/li[3]/button")
+    @FindBy(how = How.XPATH,using = "//button[text() = 'Выход']")
     private SelenideElement signOutButton;
     // локатор кнопки "Конструктор"
-    @FindBy(how = How.XPATH,using = "//div/header/nav/ul/li[1]/a/p")
+    @FindBy(how = How.XPATH,using = "//p[text() = 'Конструктор']")
     private SelenideElement constructorButton;
     // локатор логотипа "Stellar Burgers"
     @FindBy(how = How.XPATH,using = "//div/header/nav/div/a/svg")
