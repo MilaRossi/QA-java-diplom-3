@@ -18,9 +18,15 @@ public class StartPage {
     // локатор кнопки "Войти в аккаунт"
     @FindBy(how = How.XPATH,using = "//div/main/section[2]/div/button")
     private SelenideElement signInButton;
-    // локатор кнопки "Выход"
-    @FindBy(how = How.XPATH,using = "//div/main/div/nav/ul/li[3]/button")
-    private SelenideElement signOutButton;
+    // локатор раздела "Булки"
+    @FindBy(how = How.XPATH,using = "//div/main/section[1]/div[1]")
+    private SelenideElement bunsSection;
+    // локатор раздела "Соусы"
+    @FindBy(how = How.XPATH,using = "//div/main/section[1]/div[1]/div[2]/span")
+    private SelenideElement saucesSection;
+    // локатор раздела "Начинки"
+    @FindBy(how = How.XPATH,using = "//div/main/section[1]/div[1]/div[3]/span")
+    private SelenideElement fillingsSection;
     // кликнуть "Личный Кабинет"
     public LoginPage clickUserProfile() {
         userProfile.click();
@@ -36,15 +42,22 @@ public class StartPage {
         return page(LoginPage.class);
     }
     // кликнуть "Личный Кабинет", находясь на стартовой странице
-    public void clickAuthUserProfile() {
+    public ProfilePage clickAuthUserProfile() {
         userProfile.click();
+        return page(ProfilePage.class);
     }
-    // кликнуть "Выход", находясь на стартовой странице
-    public LoginPage clickSignOut() {
-        signOutButton.click();
-        return page(LoginPage.class);
+    // перейти к разделу "Булки"
+    public void chooseBuns() {
+        bunsSection.click();
     }
-
+    // перейти к разделу "Соусы"
+    public void chooseSauces() {
+        saucesSection.click();
+    }
+    // перейти к разделу "Начинки"
+    public void chooseFillings() {
+        fillingsSection.click();
+    }
 
 
 

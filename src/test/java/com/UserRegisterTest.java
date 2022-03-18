@@ -85,9 +85,9 @@ public class UserRegisterTest {
         // проверить видимость кнопки "Оформить заказ"
         startPageAfterLogin.shouldBeVisibleMakeOrderButton();
         // перейти в личный кабинет
-        startPage.clickAuthUserProfile();
+        ProfilePage profilePage = startPage.clickAuthUserProfile();
         // кликнуть выход и перейти к логину
-        startPage.clickSignOut();
+        profilePage.clickSignOut();
     }
 
 
