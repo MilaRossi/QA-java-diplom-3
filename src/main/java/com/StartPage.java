@@ -9,24 +9,34 @@ public class StartPage {
     // локатор линктекста "Личный Кабинет"
     @FindBy(how = How.LINK_TEXT, using = "Личный Кабинет")
     public SelenideElement userProfile;
-    // локатор кнопки "Войти в аккаунт"
-    @FindBy(how = How.CLASS_NAME,using = "button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg")
-    public SelenideElement userLogin;
     // локатор кнопки "Оформить заказ"
-    @FindBy(how = How.XPATH,using = "//div/main/section[2]/div/button")
+    @FindBy(how = How.XPATH,using = "//button[text() = 'Оформить заказ']")
     private SelenideElement makeOrderButton;
     // локатор кнопки "Войти в аккаунт"
-    @FindBy(how = How.XPATH,using = "//div/main/section[2]/div/button")
+    @FindBy(how = How.XPATH,using = "//button[text() = 'Войти в аккаунт']")
     private SelenideElement signInButton;
-    // локатор раздела "Булки"
+    // локатор секции Булки/Соусы/Начинки
     @FindBy(how = How.XPATH,using = "//div/main/section[1]/div[1]")
+    private SelenideElement topSection;
+    // локатор раздела "Булки"
+    @FindBy(how = How.XPATH,using = "//span[text() = 'Булки']")
     private SelenideElement bunsSection;
     // локатор раздела "Соусы"
-    @FindBy(how = How.XPATH,using = "//div/main/section[1]/div[1]/div[2]/span")
+    @FindBy(how = How.XPATH,using = "//span[text() = 'Соусы']")
     private SelenideElement saucesSection;
     // локатор раздела "Начинки"
-    @FindBy(how = How.XPATH,using = "//div/main/section[1]/div[1]/div[3]/span")
+    @FindBy(how = How.XPATH,using = "//span[text() = 'Начинки']")
     private SelenideElement fillingsSection;
+    // локатор перечня "Булки"
+    @FindBy(how = How.XPATH,using = "//h2[text() = 'Булки']")
+    private SelenideElement buns;
+    // локатор перечня "Соусы"
+    @FindBy(how = How.XPATH,using = "//h2[text() = 'Соусы']")
+    private SelenideElement sauces;
+    // локатор перечня "Начинки"
+    @FindBy(how = How.XPATH,using = "//h2[text() = 'Начинки']")
+    private SelenideElement fillings;
+
     // кликнуть "Личный Кабинет"
     public LoginPage clickUserProfile() {
         userProfile.click();
@@ -48,16 +58,32 @@ public class StartPage {
     }
     // перейти к разделу "Булки"
     public void chooseBuns() {
-        bunsSection.click();
+        bunsSection.hover();
+        topSection.click();
     }
     // перейти к разделу "Соусы"
     public void chooseSauces() {
-        saucesSection.click();
+        saucesSection.hover();
+        topSection.click();
     }
     // перейти к разделу "Начинки"
     public void chooseFillings() {
-        fillingsSection.click();
+        fillingsSection.hover();
+        topSection.click();
     }
+    // проверить видимость перечня "Булки"
+    public void shouldBeVisibleBuns() {
+        buns.shouldBe(Condition.visible);
+    }
+    // проверить видимость перечня "Соусы"
+    public void shouldBeVisibleSauces() {
+        sauces.shouldBe(Condition.visible);
+    }
+    // проверить видимость перечня "Соусы"
+    public void shouldBeVisibleFillings() {
+        fillings.shouldBe(Condition.visible);
+    }
+
 
 
 
