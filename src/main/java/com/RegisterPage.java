@@ -16,14 +16,15 @@ public class RegisterPage {
     @FindBy(how = How.XPATH,using = "//form/fieldset[3]/div/div/input")
     private SelenideElement password;
     // локатор кнопки "Зарегистрироваться"
-    @FindBy(how = How.XPATH,using = "//form/button")
+    @FindBy(how = How.XPATH,using = "//button[text() = 'Зарегистрироваться']")
     public SelenideElement signUp;
     // локатор ошибки "Некорректный пароль"
-    @FindBy(how = How.XPATH, using = "//form/fieldset[3]/div/p")
+    @FindBy(how = How.XPATH, using = "//p[text() = 'Некорректный пароль']")
     public SelenideElement incorrectPassword;
     // локатор кнопки "Войти" в форме авторизации
-    @FindBy(how = How.XPATH,using = "//div/main/div/div/p/a")
-    private SelenideElement signInButtonInAuthForm;
+    @FindBy(how = How.XPATH,using = "//a[text() = 'Войти']")
+    private SelenideElement signInLinkInAuthForm;
+
     // заполнить "Имя"
     public void setValueName(String value) {
         name.setValue(value);
@@ -47,7 +48,7 @@ public class RegisterPage {
     }
     // кликнуть "Войти" в форме авторизации
     public LoginPage clickSignInButtonInAuthForm() {
-        signInButtonInAuthForm.click();
+        signInLinkInAuthForm.click();
         return page(LoginPage.class);
     }
 
