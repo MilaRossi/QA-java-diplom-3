@@ -1,0 +1,28 @@
+package com;
+import io.qameta.allure.junit4.DisplayName;
+import org.junit.Test;
+import static com.codeborne.selenide.Selenide.open;
+
+public class ChooseSectionTest {
+    @Test
+    @DisplayName("Переход к разделам в конструкторе")
+    public void checkSwitchSection() {
+        // открыть стартовую страницу
+        StartPage startPage =
+                open("https://stellarburgers.nomoreparties.site",
+                        StartPage.class);
+        // перейти к разделу "Булки"
+        startPage.chooseBuns();
+        // проверить видимость перечня "Булки"
+        startPage.shouldBeVisibleBuns();
+        // перейти к разделу "Соусы"
+        startPage.chooseSauces();
+        // проверить видимость перечня "Соусы"
+        startPage.shouldBeVisibleSauces();
+        // перейти к разделу "Начинки"
+        startPage.chooseFillings();
+        // проверить видимость перечня "Начинки"
+        startPage.shouldBeVisibleFillings();
+    }
+
+}
