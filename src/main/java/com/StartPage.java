@@ -18,6 +18,9 @@ public class StartPage {
     // локатор кнопки "Войти в аккаунт"
     @FindBy(how = How.XPATH,using = "//div/main/section[2]/div/button")
     private SelenideElement signInButton;
+    // локатор кнопки "Выход"
+    @FindBy(how = How.XPATH,using = "//div/main/div/nav/ul/li[3]/button")
+    private SelenideElement signOutButton;
     // кликнуть "Личный Кабинет"
     public LoginPage clickUserProfile() {
         userProfile.click();
@@ -32,6 +35,16 @@ public class StartPage {
         signInButton.click();
         return page(LoginPage.class);
     }
+    // кликнуть "Личный Кабинет", находясь на стартовой странице
+    public void clickAuthUserProfile() {
+        userProfile.click();
+    }
+    // кликнуть "Выход", находясь на стартовой странице
+    public LoginPage clickSignOut() {
+        signOutButton.click();
+        return page(LoginPage.class);
+    }
+
 
 
 
