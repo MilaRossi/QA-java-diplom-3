@@ -1,0 +1,56 @@
+{
+  "uid" : "e0590b2a16746508",
+  "name" : "вход через кнопку в форме регистрации",
+  "fullName" : "com.UserRegisterTest.signInInAuthForm",
+  "historyId" : "48413a2be27874e79e4645fc5c413c31",
+  "time" : {
+    "start" : 1647715096117,
+    "stop" : 1647715096717,
+    "duration" : 600
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com"
+  }, {
+    "name" : "testClass",
+    "value" : "com.UserRegisterTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "signInInAuthForm"
+  }, {
+    "name" : "suite",
+    "value" : "com.UserRegisterTest"
+  }, {
+    "name" : "host",
+    "value" : "tests-MBP.fritz.box"
+  }, {
+    "name" : "thread",
+    "value" : "12286@tests-MBP.fritz.box.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e0590b2a16746508.json",
+  "parameterValues" : [ ]
+}

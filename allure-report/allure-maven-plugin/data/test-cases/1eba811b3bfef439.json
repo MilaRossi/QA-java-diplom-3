@@ -1,0 +1,56 @@
+{
+  "uid" : "1eba811b3bfef439",
+  "name" : "Переход к разделам в конструкторе",
+  "fullName" : "com.ChooseSectionTest.checkSwitchSection",
+  "historyId" : "d479d6372863f973235653fa37dd9e4d",
+  "time" : {
+    "start" : 1647715081205,
+    "stop" : 1647715087859,
+    "duration" : 6654
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com"
+  }, {
+    "name" : "testClass",
+    "value" : "com.ChooseSectionTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "checkSwitchSection"
+  }, {
+    "name" : "suite",
+    "value" : "com.ChooseSectionTest"
+  }, {
+    "name" : "host",
+    "value" : "tests-MBP.fritz.box"
+  }, {
+    "name" : "thread",
+    "value" : "12286@tests-MBP.fritz.box.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1eba811b3bfef439.json",
+  "parameterValues" : [ ]
+}
