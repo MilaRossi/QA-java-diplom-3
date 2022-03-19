@@ -9,7 +9,7 @@ public class SwitchFromProfileTest {
     public static final String EMAIL_POSTFIX = "@yandex.ru";
     @Test
     @DisplayName("Переход из личного кабинета в конструктор")
-    public void switchByClickingOnTheConstructorButton() {
+    public void switchFromProfile() {
         // открыть стартовую страницу
         StartPage startPage =
                 open("https://stellarburgers.nomoreparties.site",
@@ -50,7 +50,9 @@ public class SwitchFromProfileTest {
         // вернуться в личный кабинет
         ProfilePage profilePage2 = startPage.clickAuthUserProfile();
         // кликнуть выход и перейти к логину
-        profilePage2.clickSignOut();
+        LoginPage loginAfter =  profilePage2.clickSignOut();
+
+        loginAfter.shouldBeVisibleResetPassword();
 
     }
 }

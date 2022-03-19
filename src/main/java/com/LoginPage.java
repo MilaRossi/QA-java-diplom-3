@@ -48,9 +48,15 @@ public class LoginPage {
     public void clickResetPassword() {
         resetPassword.click();
     }
+
     // проверить видимость текста "Восстановить пароль"
     public void shouldBeVisibleTextResetPassword() {
         textResetPassword.shouldHave(text("Восстановление пароля"));
+    }
+
+    // проверить видимость текста "Восстановить пароль"
+    public void shouldBeVisibleResetPassword() {
+        resetPassword.shouldHave(text("Восстановить пароль"));
     }
 
 

@@ -3,8 +3,8 @@ import com.model.User;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
-import static com.codeborne.selenide.Selenide.open;
 
+import static com.codeborne.selenide.Selenide.open;
 
 public class UserRegisterFailedTest {
     public static final String EMAIL_POSTFIX = "@yandex.ru";

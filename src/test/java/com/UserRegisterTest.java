@@ -88,8 +88,7 @@ public class UserRegisterTest {
         ProfilePage profilePage = startPage.clickAuthUserProfile();
         // кликнуть выход и перейти к логину
         profilePage.clickSignOut();
+        loginPage.shouldBeVisibleResetPassword();
+
     }
-
-
-
 }
