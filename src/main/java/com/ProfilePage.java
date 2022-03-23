@@ -13,7 +13,7 @@ public class ProfilePage {
     @FindBy(how = How.XPATH,using = "//p[text() = 'Конструктор']")
     private SelenideElement constructorButton;
     // локатор логотипа "Stellar Burgers"
-    @FindBy(how = How.XPATH,using = "//div/header/nav/div/a/svg")
+    @FindBy(how = How.CLASS_NAME,using = ".AppHeader_header__logo__2D0X2")
     private SelenideElement logoStellarBurgers;
 
     // кликнуть "Выход", находясь на стартовой странице
