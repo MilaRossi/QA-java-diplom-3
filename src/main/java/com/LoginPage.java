@@ -10,10 +10,10 @@ public class LoginPage {
     @FindBy(how = How.XPATH,using = "//a[text() = 'Зарегистрироваться']")
     public SelenideElement userRegister;
     // локатор поля "Email"
-    @FindBy(how = How.XPATH,using = "//form/fieldset[1]/div/div/input")
+    @FindBy(how = How.XPATH,using = "//label[text() = 'Email']/following-sibling::input")
     private SelenideElement email;
     // локатор поля "Пароль"
-    @FindBy(how = How.XPATH,using = "//form/fieldset[2]/div/div/input")
+    @FindBy(how = How.XPATH,using = "//label[text() = 'Пароль']/following-sibling::input")
     private SelenideElement password;
     // локатор кнопки "Войти"
     @FindBy(how = How.XPATH,using = "//button[text() = 'Войти']")
