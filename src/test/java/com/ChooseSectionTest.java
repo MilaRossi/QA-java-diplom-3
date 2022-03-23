@@ -1,6 +1,8 @@
 package com;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
+
+import static com.Base.BASE_URL;
 import static com.codeborne.selenide.Selenide.open;
 
 public class ChooseSectionTest {
@@ -9,7 +11,7 @@ public class ChooseSectionTest {
     public void checkSwitchSection() {
         // открыть стартовую страницу
         StartPage startPage =
-                open("https://stellarburgers.nomoreparties.site",
+                open(BASE_URL,
                         StartPage.class);
         // перейти к разделу "Булки"
         startPage.chooseBuns();
