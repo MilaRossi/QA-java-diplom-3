@@ -3,6 +3,8 @@ import com.model.User;
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
+
+import static com.Base.BASE_URL;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SwitchFromProfileTest {
@@ -12,7 +14,7 @@ public class SwitchFromProfileTest {
     public void switchFromProfile() {
         // открыть стартовую страницу
         StartPage startPage =
-                open("https://stellarburgers.nomoreparties.site",
+                open(BASE_URL,
                         StartPage.class);
         // создать объект класса LoginPage, кликнуть на стартовой странице по "Личный Кабинет"
         LoginPage loginPage = startPage.clickUserProfile();
@@ -51,7 +53,6 @@ public class SwitchFromProfileTest {
         ProfilePage profilePage2 = startPage.clickAuthUserProfile();
         // кликнуть выход и перейти к логину
         LoginPage loginAfter =  profilePage2.clickSignOut();
-
         loginAfter.shouldBeVisibleResetPassword();
 
     }
