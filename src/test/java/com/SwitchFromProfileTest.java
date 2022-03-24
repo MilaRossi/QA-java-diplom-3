@@ -13,9 +13,7 @@ public class SwitchFromProfileTest {
     @DisplayName("Переход из личного кабинета в конструктор")
     public void switchFromProfile() {
         // открыть стартовую страницу
-        StartPage startPage =
-                open(BASE_URL,
-                        StartPage.class);
+        StartPage startPage = open(BASE_URL, StartPage.class);
         // создать объект класса LoginPage, кликнуть на стартовой странице по "Личный Кабинет"
         LoginPage loginPage = startPage.clickUserProfile();
         // создать объект класса RegisterPage, кликнуть на логин странице по "Зарегистрироваться"
@@ -54,6 +52,5 @@ public class SwitchFromProfileTest {
         // кликнуть выход и перейти к логину
         LoginPage loginAfter =  profilePage2.clickSignOut();
         loginAfter.shouldBeVisibleResetPassword();
-
     }
 }

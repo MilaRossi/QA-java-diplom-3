@@ -10,21 +10,18 @@ public class ChooseSectionTest {
     @DisplayName("Переход к разделам в конструкторе")
     public void checkSwitchSection() {
         // открыть стартовую страницу
-        StartPage startPage =
-                open(BASE_URL,
-                        StartPage.class);
+        StartPage startPage = open(BASE_URL, StartPage.class);
         // перейти к разделу "Булки"
         startPage.chooseBuns();
         // проверить видимость перечня "Булки"
-        startPage.shouldBeVisibleBuns();
+        startPage.isUserInTheBunsSection();
         // перейти к разделу "Соусы"
         startPage.chooseSauces();
         // проверить видимость перечня "Соусы"
-        startPage.shouldBeVisibleSauces();
+        startPage.isUserInTheSaucesSection();
         // перейти к разделу "Начинки"
         startPage.chooseFillings();
         // проверить видимость перечня "Начинки"
-        startPage.shouldBeVisibleFillings();
+        startPage.isUserInTheFillingsSection();
     }
-
 }

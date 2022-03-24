@@ -13,9 +13,7 @@ public class UserRegisterFailedTest {
     @DisplayName("Получить ошибку регистрации пользователя с паролем короче 6 символов")
     public void registerUser() {
         // открыть стартовую страницу
-        StartPage startPage =
-                open(BASE_URL,
-                        StartPage.class);
+        StartPage startPage = open(BASE_URL, StartPage.class);
         // создать объект класса LoginPage, кликнуть на стартовой странице по "Личный Кабинет"
         LoginPage loginPage = startPage.clickUserProfile();
         // создать объект класса RegisterPage, кликнуть на логин странице по "Зарегистрироваться"

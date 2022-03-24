@@ -30,12 +30,12 @@ public class StartPage {
     // локатор перечня "Булки"
     @FindBy(how = How.XPATH,using = "//h2[text() = 'Булки']")
     private SelenideElement buns;
-    // локатор перечня "Соусы"
-    @FindBy(how = How.XPATH,using = "//h2[text() = 'Соусы']")
-    private SelenideElement sauces;
-    // локатор перечня "Начинки"
-    @FindBy(how = How.XPATH,using = "//h2[text() = 'Начинки']")
-    private SelenideElement fillings;
+//    // локатор перечня "Соусы"
+//    @FindBy(how = How.XPATH,using = "//h2[text() = 'Соусы']")
+//    private SelenideElement sauces;
+//    // локатор перечня "Начинки"
+//    @FindBy(how = How.XPATH,using = "//h2[text() = 'Начинки']")
+//    private SelenideElement fillings;
 
     // кликнуть "Личный Кабинет"
     public LoginPage clickUserProfile() {
@@ -71,17 +71,19 @@ public class StartPage {
         fillingsSection.hover();
         topSection.click();
     }
-    // проверить видимость перечня "Булки"
-    public void shouldBeVisibleBuns() {
-        buns.shouldBe(Condition.visible);
+
+    public void isUserInTheBunsSection() {
+        bunsSection.getAttribute("class").contains("text_type_main-default");
     }
+
     // проверить видимость перечня "Соусы"
-    public void shouldBeVisibleSauces() {
-        sauces.shouldBe(Condition.visible);
+    public void isUserInTheSaucesSection() {
+        saucesSection.getAttribute("class").contains("text_type_main-default");
     }
-    // проверить видимость перечня "Соусы"
-    public void shouldBeVisibleFillings() {
-        fillings.shouldBe(Condition.visible);
+
+    // проверить видимость перечня "Начинки"
+    public void isUserInTheFillingsSection() {
+        fillingsSection.getAttribute("class").contains("text_type_main-default");
     }
 
 }
