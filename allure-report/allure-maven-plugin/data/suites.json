@@ -1,0 +1,112 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "com.ChooseSectionTest",
+    "children" : [ {
+      "name" : "Переход к разделам в конструкторе",
+      "uid" : "1eba811b3bfef439",
+      "parentUid" : "58a919e5e6eca4f20b66808ab799a029",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715081205,
+        "stop" : 1647715087859,
+        "duration" : 6654
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "58a919e5e6eca4f20b66808ab799a029"
+  }, {
+    "name" : "com.SwitchFromProfileTest",
+    "children" : [ {
+      "name" : "Переход из личного кабинета в конструктор",
+      "uid" : "17bedd769ad5f12b",
+      "parentUid" : "326552baed37a8a16fcc89e6c2e62cce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715087928,
+        "stop" : 1647715091452,
+        "duration" : 3524
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "326552baed37a8a16fcc89e6c2e62cce"
+  }, {
+    "name" : "com.UserRegisterFailedTest",
+    "children" : [ {
+      "name" : "Получить ошибку регистрации пользователя с паролем короче 6 символов",
+      "uid" : "d494ba91678faabf",
+      "parentUid" : "ac3ff44adb809d85f56c0baf0da3640e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715091458,
+        "stop" : 1647715092510,
+        "duration" : 1052
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ac3ff44adb809d85f56c0baf0da3640e"
+  }, {
+    "name" : "com.UserRegisterTest",
+    "children" : [ {
+      "name" : "Успешная регистрация пользователя",
+      "uid" : "cce18416d8ea5dc3",
+      "parentUid" : "1cea79171878b04ad8af6336a5633ff3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715092513,
+        "stop" : 1647715095090,
+        "duration" : 2577
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "вход по кнопке «Войти в аккаунт» на главной",
+      "uid" : "d2a739dec111b734",
+      "parentUid" : "1cea79171878b04ad8af6336a5633ff3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715095094,
+        "stop" : 1647715095545,
+        "duration" : 451
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "вход через кнопку в форме восстановления пароля",
+      "uid" : "3f475f920890905",
+      "parentUid" : "1cea79171878b04ad8af6336a5633ff3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715095548,
+        "stop" : 1647715096115,
+        "duration" : 567
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "вход через кнопку в форме регистрации",
+      "uid" : "e0590b2a16746508",
+      "parentUid" : "1cea79171878b04ad8af6336a5633ff3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647715096117,
+        "stop" : 1647715096717,
+        "duration" : 600
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1cea79171878b04ad8af6336a5633ff3"
+  } ]
+}

@@ -1,0 +1,71 @@
+[ {
+  "uid" : "1eba811b3bfef439",
+  "name" : "Переход к разделам в конструкторе",
+  "time" : {
+    "start" : 1647715081205,
+    "stop" : 1647715087859,
+    "duration" : 6654
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cce18416d8ea5dc3",
+  "name" : "Успешная регистрация пользователя",
+  "time" : {
+    "start" : 1647715092513,
+    "stop" : 1647715095090,
+    "duration" : 2577
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d494ba91678faabf",
+  "name" : "Получить ошибку регистрации пользователя с паролем короче 6 символов",
+  "time" : {
+    "start" : 1647715091458,
+    "stop" : 1647715092510,
+    "duration" : 1052
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e0590b2a16746508",
+  "name" : "вход через кнопку в форме регистрации",
+  "time" : {
+    "start" : 1647715096117,
+    "stop" : 1647715096717,
+    "duration" : 600
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "17bedd769ad5f12b",
+  "name" : "Переход из личного кабинета в конструктор",
+  "time" : {
+    "start" : 1647715087928,
+    "stop" : 1647715091452,
+    "duration" : 3524
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d2a739dec111b734",
+  "name" : "вход по кнопке «Войти в аккаунт» на главной",
+  "time" : {
+    "start" : 1647715095094,
+    "stop" : 1647715095545,
+    "duration" : 451
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f475f920890905",
+  "name" : "вход через кнопку в форме восстановления пароля",
+  "time" : {
+    "start" : 1647715095548,
+    "stop" : 1647715096115,
+    "duration" : 567
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

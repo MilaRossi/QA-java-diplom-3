@@ -1,0 +1,56 @@
+{
+  "uid" : "d2a739dec111b734",
+  "name" : "вход по кнопке «Войти в аккаунт» на главной",
+  "fullName" : "com.UserRegisterTest.signIn",
+  "historyId" : "74329ddb69b53e88c9004f335b76b5e7",
+  "time" : {
+    "start" : 1647715095094,
+    "stop" : 1647715095545,
+    "duration" : 451
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com"
+  }, {
+    "name" : "testClass",
+    "value" : "com.UserRegisterTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "signIn"
+  }, {
+    "name" : "suite",
+    "value" : "com.UserRegisterTest"
+  }, {
+    "name" : "host",
+    "value" : "tests-MBP.fritz.box"
+  }, {
+    "name" : "thread",
+    "value" : "12286@tests-MBP.fritz.box.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d2a739dec111b734.json",
+  "parameterValues" : [ ]
+}
